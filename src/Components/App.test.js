@@ -9,9 +9,9 @@ describe('App is working as intended', () => {
         render(<App />);
     })
 
-    test('App has 7 links', () => {
+    test('App has 8 links', () => {
         render(<App />);
         const links = screen.queryAllByTestId(/header-link/i);
-        expect(links.length).toBe(7);
+        expect(links.length).toBe(8);
     })
 })

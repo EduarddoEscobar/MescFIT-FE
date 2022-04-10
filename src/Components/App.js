@@ -2,6 +2,7 @@ import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faInstagram } from '@fortawesome/free-brands-svg-icons';
 import Home from './Home/Home';
+import Catalog from './Catalog/Catalog';
 import './App.css';
 
 const App = (props) => {
@@ -13,10 +14,11 @@ const App = (props) => {
         </div>
         <nav>
             <Link data-testid="header-link" to="/about">About Me</Link>
+            <Link data-testid="header-link" to="/plans">Training Plans</Link>
             <Link data-testid="header-link" to="/one-to-onecoaching">1:1 Coaching</Link>
             <Link data-testid="header-link" to="/testimonials">Testimonials</Link>
-            <Link data-testid="header-link" to="/workout-catalog">Workout Catalog</Link>
-            <Link data-testid="header-link" to="/pricing">Pricing</Link>
+            <Link data-testid="header-link" to="/exercise-library">Exercise Library</Link>
+            <Link data-testid="header-link" to="/faq">Pricing / FAQ</Link>
         </nav>
         <div className="nav-contact">
             <a href="https://www.instagram.com/escobarmarkk/" target="_blank" rel="noreferrer"><FontAwesomeIcon icon={faInstagram} /></a>
@@ -25,6 +27,7 @@ const App = (props) => {
         </header>
         <Routes>
             <Route path="/" element={<Home />}/>
+            <Route path="/exercise-library" element={<Catalog />}/>
         </Routes>
     </Router>
   );
