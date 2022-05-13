@@ -1,0 +1,63 @@
+/*Header Styles*/
+header {
+  height: 10vh;
+  display: flex;
+  align-items: center;
+
+  padding: 0 5%;
+  background-color: white;
+}
+
+header .logo,
+.nav-contact {
+  width: 20%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+header .logo a {
+  font-size: 2rem;
+  font-family: 'Satisfy', cursive;
+}
+
+header nav {
+  width: 60%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header nav a {
+  border-bottom: 1px solid white;
+}
+
+header nav a:hover {
+  border-bottom: 1px solid black;
+}
+
+.nav-contact {
+  justify-content: flex-end;
+}
+
+.nav-contact * {
+  font-size: 2rem;
+  margin-right: 5%;
+}
+
+.nav-contact .contact-button {
+  border: 1px solid white;
+  padding: 2% 3%;
+  background-color: black;
+  color: white;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.nav-contact .contact-button:hover {
+  transition: 0.3s ease-in-out;
+  border: 1px solid black;
+  background-color: white;
+  color: black;
+}
