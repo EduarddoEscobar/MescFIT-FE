@@ -1,5 +1,6 @@
 .footer-div {
-  height: 8vh;
+  height: 12vh;
+  padding: 1% 0;
   &.footer-disclaimer {
     display: flex;
     background-color: #555555;
@@ -12,6 +13,7 @@
 
     .middle-content {
       text-align: center;
+      font-size: 1rem;
     }
 
     .side-content {
@@ -42,7 +44,12 @@
       }
 
       &.main-links {
-        justify-content: space-between;
+        justify-content: space-evenly;
+
+        a {
+          height: 33%;
+          font-weight: 200;
+        }
       }
     }
   }

@@ -1,4 +1,3 @@
-const theme = require('./src/styles/Theme/MescFit.js');
 const CracoLessPlugin = require('craco-less');
 
 module.exports = {
@@ -8,7 +7,6 @@ module.exports = {
       options: {
         lessLoaderOptions: {
           lessOptions: {
-            globalVars: theme,
             javascriptEnabled: true,
           },
         },
