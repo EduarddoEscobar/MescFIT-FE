@@ -1,4 +1,8 @@
+@import (reference) '../Theme/index.less';
 @h1-size: 6rem;
+@h2-size: 5rem;
+@top-img: url('../../img/LandingBackground.jpg');
+@info-img: url('../../img/WallText.jpg');
 
 .landing-main {
   height: 100vh;
@@ -6,7 +10,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  color: white;
+
+  * {
+    color: white;
+  }
 
   img {
     width: 80%;
@@ -26,10 +33,31 @@
   }
 }
 
+.landing-info {
+  padding: 2% 0;
+  height: 80vh;
+  font-family: @text_font;
+  h2 {
+    color: red;
+    font-family: @big_text_font;
+  }
+
+  .carousel-container {
+    max-width: 100%;
+  }
+}
+
 .image-container {
   height: 100vh;
-  background-image: url('../../img/LandingBackground.jpg');
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+
+  &.top {
+    background-image: @top-img;
+  }
+
+  &.mid {
+    background-image: @info-img;
+  }
 }
