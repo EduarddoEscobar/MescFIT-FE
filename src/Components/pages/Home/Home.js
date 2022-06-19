@@ -3,7 +3,7 @@ import '../../../styles/LandingPageStyles/index.less';
 import BodySection from '../../common/Sections/BodySection';
 import mainLogo from '../../../img/MescFitLongRed.png';
 import { testimonials as testData } from '../../../data/Testimonials';
-import TestimonialCarousel from './TestimonialCarousel';
+import TestimonialCarousel from '../Testimonials/TestimonialCarousel';
 
 const Home = () => {
   const [testimonials, setTestimonials] = useState([]);
@@ -46,18 +46,29 @@ const Home = () => {
         <div className="landing-about info-section">
           <BodySection
             left={
-              <div>
+              <div className="about-text">
                 <h2>About MescFIT</h2>
                 <p>
-                  MescFIT and its services are based in Newark, Delaware,
-                  offering in-person training, online coaching, and nutrition
-                  guidance
+                  <i>
+                    MescFIT and its services are based in Newark, Delaware,
+                    offering in-person training, online coaching, and nutrition
+                    guidance
+                  </i>
                 </p>
               </div>
+            }
+            right={
+              <img
+                src={
+                  'https://fitnessvolt.com/wp-content/uploads/2021/03/chris-bumstead-750x393.jpg'
+                }
+                alt="MescFIT owner"
+              />
             }
           />
         </div>
         <div className="landing-testimonials info-section">
+          <h2>Testimonials</h2>
           {testimonials.length > 0 && (
             <TestimonialCarousel testimonials={testimonials} />
           )}
