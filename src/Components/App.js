@@ -1,13 +1,13 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 import Home from './pages/Home/Home';
-import Catalog from './pages/Catalog/Catalog';
+import NotFound from './pages/WIP/NotFound';
 
 const App = () => {
   return (
     <Routes>
       <Route path="/" element={<Home />} />
-      <Route path="/exercise-library" element={<Catalog />} />
+      <Route path="*" element={<NotFound />} />
     </Routes>
   );
 };
