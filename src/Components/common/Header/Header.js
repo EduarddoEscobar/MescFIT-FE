@@ -1,41 +1,64 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { InstagramOutlined } from '@ant-design/icons';
-import '../../../styles/HeaderStyles/index.less';
+import IconLink from '../Links/IconLink';
+import { faInstagram } from '@fortawesome/free-brands-svg-icons';
+import HeaderLink from '../Links/HeaderLink';
 
 const Header = props => {
+  const [focus, setFocus] = useState('');
+
   return (
-    <header>
+    <header className="desktop-only">
       <div className="logo">
-        <Link data-testid="header-link" to="/">
+        <Link data-testid="header-link" to="/" onClick={() => setFocus('/')}>
           MescFIT
         </Link>
       </div>
       <nav>
-        <Link data-testid="header-link" to="/about">
+        <HeaderLink focus={focus} setFocus={setFocus} to="/about">
           About Me
-        </Link>
-        <Link data-testid="header-link" to="/coaching">
+        </HeaderLink>
+        <HeaderLink
+          focus={focus}
+          setFocus={setFocus}
+          to="/coaching"
+          extendable={true}
+          links={[
+            {
+              to: '/coaching/#coaching',
+              title: '1:1 Coaching',
+            },
+            {
+              to: '/coaching/#faq',
+              title: 'Pricing/FAQs',
+            },
+          ]}
+        >
           Coaching
-        </Link>
-        <Link data-testid="header-link" to="/testimonials">
+        </HeaderLink>
+        <HeaderLink
+          focus={focus}
+          extendable={true}
+          to="/testimonials"
+          setFocus={setFocus}
+          links={[
+            {
+              to: '/testimonials/submit',
+              title: 'Submit a Testimonial',
+            },
+          ]}
+        >
           Testimonials
-        </Link>
-        <Link data-testid="header-link" to="/exercise-library">
+        </HeaderLink>
+        <HeaderLink focus={focus} setFocus={setFocus} to="/exercise-library">
           Exercise Library
-        </Link>
-        <Link data-testid="header-link" to="/faq">
-          Pricing / FAQ
-        </Link>
+        </HeaderLink>
       </nav>
       <div className="nav-contact">
-        <a
+        <IconLink
+          icon={faInstagram}
           href="https://www.instagram.com/escobarmarkk/"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <InstagramOutlined />
-        </a>
+        />
         <Link
           className="contact-button"
           data-testid="header-link"

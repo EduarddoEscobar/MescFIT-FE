@@ -1,26 +1,58 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Carousel } from 'antd';
-import BodySection from '../../common/Sections/BodySection';
 import Testimonial from './Testimonial';
+import styled from 'styled-components';
 
-const TestimonialCarousel = props => {
-  const { testimonials } = props;
+const CarouselWrapper = styled(Carousel)`
+  .slick-dots li button {
+    width: 1.25vh;
+    height: 1.25vh;
+    border-radius: 100%;
+  }
+`;
+
+const TestimonialCarousel = ({ testimonials, autoplay, dots, showOne }) => {
+  const [data, setData] = useState([]);
 
   useEffect(() => {
-    console.log(props);
-  }, [props]);
+    let formattedData = testimonials.reduce((acc, cur, ind, arr) => {
+      if (ind % 2 === 0) {
+        acc.push(arr.slice(ind, ind + 2));
+      }
+      return acc;
+    }, []);
+    setData(formattedData);
+  }, [testimonials]);
 
   return (
-    <Carousel>
-      {testimonials.map(([testimonialOne, testimonialTwo], ind) => (
-        <BodySection
-          key={ind}
-          className="carousel-item"
-          left={<Testimonial testimonial={testimonialOne} />}
-          right={<Testimonial testimonial={testimonialTwo} />}
-        />
-      ))}
-    </Carousel>
+    <CarouselWrapper
+      autoplay={!!autoplay}
+      dots={dots}
+      className="main-carousel"
+    >
+      {!showOne
+        ? data.map(([testimonialOne, testimonialTwo], ind) => (
+            <div key={ind}>
+              <div className="carousel-item">
+                <div className="half center-text">
+                  <Testimonial testimonial={testimonialOne} />
+                </div>
+                <div className="half center-text">
+                  <Testimonial testimonial={testimonialTwo} />
+                </div>
+              </div>
+            </div>
+          ))
+        : testimonials.map((testimonial, ind) => (
+            <div key={ind}>
+              <div className="carousel-item">
+                <div className="center-text">
+                  <Testimonial testimonial={testimonial} />
+                </div>
+              </div>
+            </div>
+          ))}
+    </CarouselWrapper>
   );
 };
 

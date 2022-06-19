@@ -1,3 +1,9 @@
+@import (reference) './Theme/index.less';
+
+.top-of-page {
+  padding-top: @header_desktop_size;
+}
+
 .box {
   border: 1px solid red;
 }
@@ -6,6 +12,33 @@
   text-decoration: underline;
 }
 
+.italics {
+  font-style: italic;
+}
+
 .center-text {
   text-align: center;
+}
+
+.mobile-only,
+.hide {
+  display: none;
+}
+
+.full {
+  width: 100%;
+}
+
+.half {
+  width: 50%;
+}
+
+@media (max-width: @s) {
+  .mobile-only {
+    display: flex;
+  }
+
+  .desktop-only {
+    display: none;
+  }
 }
