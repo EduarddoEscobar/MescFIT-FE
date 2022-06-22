@@ -18,7 +18,6 @@ const Home = () => {
       }
       return acc;
     }, []);
-    console.log(formattedData);
     setTestimonials(formattedData);
   }, []);
 
@@ -42,7 +41,7 @@ const Home = () => {
           />
         </div>
       </div>
-      <div className="landing-info image-container mid">
+      <div className="landing-content image-container mid">
         <div className="landing-about info-section">
           <BodySection
             left={
@@ -73,6 +72,7 @@ const Home = () => {
             <TestimonialCarousel testimonials={testimonials} />
           )}
         </div>
+        <div className="landing-instagram info-section"></div>
       </div>
     </>
   );

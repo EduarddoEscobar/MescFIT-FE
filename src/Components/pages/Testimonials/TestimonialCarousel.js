@@ -1,14 +1,10 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { Carousel } from 'antd';
 import BodySection from '../../common/Sections/BodySection';
 import Testimonial from './Testimonial';
 
 const TestimonialCarousel = props => {
   const { testimonials } = props;
-
-  useEffect(() => {
-    console.log(props);
-  }, [props]);
 
   return (
     <Carousel>
