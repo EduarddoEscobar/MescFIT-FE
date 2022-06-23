@@ -7,7 +7,7 @@ const TestimonialSection = ({ testimonials }) => {
     <div className="landing-testimonials info-section">
       <h2>Testimonials</h2>
       {testimonials.length > 0 && (
-        <TestimonialCarousel testimonials={testimonials} />
+        <TestimonialCarousel testimonials={testimonials} autoplay={true} />
       )}
     </div>
   );

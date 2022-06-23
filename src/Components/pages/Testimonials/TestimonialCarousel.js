@@ -4,10 +4,10 @@ import BodySection from '../../common/Sections/BodySection';
 import Testimonial from './Testimonial';
 
 const TestimonialCarousel = props => {
-  const { testimonials } = props;
+  const { testimonials, autoplay } = props;
 
   return (
-    <Carousel>
+    <Carousel autoplay={!!autoplay} dots={false}>
       {testimonials.map(([testimonialOne, testimonialTwo], ind) => (
         <BodySection
           key={ind}
