@@ -14,7 +14,8 @@ const Faq = () => {
   return (
     <div className="faq-container">
       <h1>Frequently Asked Questions</h1>
-      {faqs.length > 0 && <FaqItem faq={faqs[0]} />}
+      {faqs.length > 0 &&
+        faqs.map((faq, ind) => <FaqItem faq={faq} key={ind} />)}
     </div>
   );
 };

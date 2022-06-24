@@ -14,12 +14,32 @@
     font-size: 3.5rem;
     font-weight: bold;
   }
+
+  .question-text {
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    font-size: 1.25rem;
+
+    .arrow-icon {
+      font-size: 1.25rem;
+    }
+  }
+
+  .answer-text {
+    font-size: 1.15rem;
+    overflow: hidden;
+    transition: max-height 500ms;
+    div {
+      padding-top: 2%;
+    }
+  }
 }
 
 .faq-item {
   background-color: white;
-  border: 1px solid #00bbe3;
   border-radius: 5px;
   padding: 2% 3%;
   width: 80%;
+  margin-top: 1rem;
 }
