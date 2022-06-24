@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 const data = [
   {
     question: 'What is included?',
@@ -56,6 +58,17 @@ const data = [
     question: 'What if I do not use all of my sessions before month is over?',
     answer: [
       "If you don't use your sessions before the month is over they carry over to the next month so long as you renew your subscription or make your next monthly payment within 10 days that your prior month expired.",
+    ],
+  },
+  {
+    question: 'When/How can I start?',
+    answer: [
+      [
+        '- ',
+        <Link to="/apply">Apply online today.</Link>,
+        ' All you have to do is send me an email with your name, goals, age, goals, and other information you think I should know.',
+      ],
+      '- After filling out your application, you will receive an email within 3-5 business days to schedule a free zoom video consultation.',
     ],
   },
 ];
