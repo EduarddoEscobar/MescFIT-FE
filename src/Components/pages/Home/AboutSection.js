@@ -1,4 +1,5 @@
 import React from 'react';
+import '../../../styles/LandingPageStyles/index.less';
 import BodySection from '../../common/Sections/BodySection';
 
 const AboutSection = () => {

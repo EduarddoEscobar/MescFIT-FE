@@ -1,4 +1,5 @@
 import React from 'react';
+import '../../../styles/LandingPageStyles/index.less';
 import TestimonialCarousel from '../Testimonials/TestimonialCarousel';
 
 const TestimonialSection = ({ testimonials }) => {
