@@ -7,7 +7,7 @@ const TestimonialCarousel = props => {
   const { testimonials, autoplay } = props;
 
   return (
-    <Carousel autoplay={!!autoplay} dots={false}>
+    <Carousel autoplay={!!autoplay} dots={false} className="main-carousel">
       {testimonials.map(([testimonialOne, testimonialTwo], ind) => (
         <BodySection
           key={ind}
