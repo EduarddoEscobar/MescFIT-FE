@@ -3,6 +3,7 @@
 @h2-size: 5rem;
 @top-img: url('../../img/LandingBackground.jpg');
 @info-img: url('../../img/WallText.jpg');
+@testimonial-img: url('../../img/TestimonialBackground.png');
 
 .landing-main {
   height: 92vh;
@@ -70,6 +71,16 @@
     text-align: center;
     h2 {
       padding: 2% 0;
+      color: #fe605f;
+    }
+
+    .main-carousel {
+      .testimonial-container {
+        p,
+        h3 {
+          color: white;
+        }
+      }
     }
   }
 }
@@ -83,7 +94,11 @@
     background-image: @top-img;
   }
 
-  &.mid {
+  &.about-mid {
     background-image: @info-img;
+  }
+
+  &.testimonial-mid {
+    background-image: @testimonial-img;
   }
 }

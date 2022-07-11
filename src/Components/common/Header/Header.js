@@ -1,7 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { InstagramOutlined } from '@ant-design/icons';
 import '../../../styles/HeaderStyles/index.less';
+import IconLink from '../IconLink';
+import { faInstagram } from '@fortawesome/free-brands-svg-icons';
 
 const Header = props => {
   return (
@@ -34,7 +35,7 @@ const Header = props => {
           target="_blank"
           rel="noreferrer"
         >
-          <InstagramOutlined />
+          <IconLink icon={faInstagram} />
         </a>
         <Link
           className="contact-button"
