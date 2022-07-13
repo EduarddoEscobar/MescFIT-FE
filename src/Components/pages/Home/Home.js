@@ -4,6 +4,7 @@ import { testimonials as testData } from '../../../data/Testimonials';
 import AboutSection from './AboutSection';
 import TestimonialSection from './TestimonialSection';
 import TopSection from './TopSection';
+import InstagramSection from './InstagramSection';
 
 const Home = () => {
   const [testimonials, setTestimonials] = useState([]);
@@ -24,12 +25,12 @@ const Home = () => {
   return (
     <>
       <TopSection />
-      <div className="landing-content image-container about-mid">
+      <div className="landing-content image-container mid">
         <AboutSection />
-        {/*<div className="landing-instagram info-section"></div>*/}
       </div>
-      <div className="landing-content image-container testimonial-mid">
+      <div className="landing-content image-container bot">
         <TestimonialSection testimonials={testimonials} />
+        <InstagramSection />
       </div>
     </>
   );

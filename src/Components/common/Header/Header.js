@@ -30,13 +30,10 @@ const Header = props => {
         </Link>
       </nav>
       <div className="nav-contact">
-        <a
+        <IconLink
+          icon={faInstagram}
           href="https://www.instagram.com/escobarmarkk/"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <IconLink icon={faInstagram} />
-        </a>
+        />
         <Link
           className="contact-button"
           data-testid="header-link"
