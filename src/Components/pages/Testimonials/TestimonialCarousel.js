@@ -2,12 +2,25 @@ import React from 'react';
 import { Carousel } from 'antd';
 import BodySection from '../../common/Sections/BodySection';
 import Testimonial from './Testimonial';
+import styled from 'styled-components';
+
+const CarouselWrapper = styled(Carousel)`
+  .slick-dots li button {
+    width: 1.25vh;
+    height: 1.25vh;
+    border-radius: 100%;
+  }
+`;
 
 const TestimonialCarousel = props => {
-  const { testimonials, autoplay } = props;
+  const { testimonials, autoplay, dots } = props;
 
   return (
-    <Carousel autoplay={!!autoplay} dots={false} className="main-carousel">
+    <CarouselWrapper
+      autoplay={!!autoplay}
+      dots={dots}
+      className="main-carousel"
+    >
       {testimonials.map(([testimonialOne, testimonialTwo], ind) => (
         <BodySection
           key={ind}
@@ -16,7 +29,7 @@ const TestimonialCarousel = props => {
           right={<Testimonial testimonial={testimonialTwo} />}
         />
       ))}
-    </Carousel>
+    </CarouselWrapper>
   );
 };
 

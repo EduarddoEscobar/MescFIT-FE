@@ -24,10 +24,12 @@ const Home = () => {
   return (
     <>
       <TopSection />
-      <div className="landing-content image-container mid">
+      <div className="landing-content image-container about-mid">
         <AboutSection />
-        <TestimonialSection testimonials={testimonials} />
         {/*<div className="landing-instagram info-section"></div>*/}
+      </div>
+      <div className="landing-content image-container testimonial-mid">
+        <TestimonialSection testimonials={testimonials} />
       </div>
     </>
   );

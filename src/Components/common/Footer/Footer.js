@@ -1,12 +1,53 @@
 import React from 'react';
-import { InstagramOutlined } from '@ant-design/icons';
 import { Link } from 'react-router-dom';
 import '../../../styles/FooterStyles/index.less';
+import {
+  faTiktok,
+  faInstagram,
+  faYoutube,
+} from '@fortawesome/free-brands-svg-icons';
+import IconLink from '../IconLink';
 
 const Footer = props => {
   return (
     <footer>
       {/*Top Half of Footer*/}
+      <div className="footer-div footer-links">
+        <div className="social-links footer-content">
+          {/*TODO: Switch these out for FontAwesome icons*/}
+          <IconLink
+            href="https://www.instagram.com/escobarmarkk/"
+            icon={faInstagram}
+          />
+          <IconLink
+            href="https://www.tiktok.com/@escobarmarkk"
+            icon={faTiktok}
+          />
+          <IconLink
+            href="https://youtube.com/channel/UCnVQa9DSntayyDwU5K0-Ivw"
+            icon={faYoutube}
+          />
+        </div>
+        <div className="footer-content main-links">
+          <Link to="/">Home</Link>
+          <Link to="/about">About Me</Link>
+          <Link to="/coaching">Coaching</Link>
+          <Link to="/testimonials">Testimonials</Link>
+          <Link to="/exercise-library">Exercise Library</Link>
+          <Link to="/faq">Pricing / FAQs</Link>
+        </div>
+        <div className="footer-content center-text">
+          <a href="mailto:escobarmark@gmail.com" className="underline italics">
+            Email Me
+          </a>
+          <Link to="">Business & Coaching Inquiries</Link>
+        </div>
+        <div className="footer-content center-text copyright">
+          <h2>©2022 by MescFIT</h2>
+        </div>
+      </div>
+
+      {/*Lower Half of Footer*/}
       <div className="footer-div footer-disclaimer">
         <div className="side-content">
           <h2>Disclaimer: </h2>
@@ -22,36 +63,6 @@ const Footer = props => {
             direct or indirect loses or damages that may result including, but
             not limited to, economic loss, injury or illness.
           </p>
-        </div>
-        <div className="side-content">
-          <a
-            href="https://www.instagram.com/escobarmarkk/"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <InstagramOutlined />
-          </a>
-        </div>
-      </div>
-
-      {/*Lower Half of Footer*/}
-      <div className="footer-div footer-links">
-        <div className="footer-content main-links">
-          <Link to="/">Home</Link>
-          <Link to="/about">About Me</Link>
-          <Link to="/coaching">Coaching</Link>
-          <Link to="/testimonials">Testimonials</Link>
-          <Link to="/exercise-library">Exercise Library</Link>
-          <Link to="/faq">Pricing / FAQs</Link>
-        </div>
-        <div className="footer-content center-text">
-          <a href="mailto:escobarmark@gmail.com" className="underline">
-            Email Me
-          </a>
-          <Link to="">Business & Coaching Inquiries</Link>
-        </div>
-        <div className="footer-content center-text">
-          <h2>©2022 by MescFIT</h2>
         </div>
       </div>
     </footer>
