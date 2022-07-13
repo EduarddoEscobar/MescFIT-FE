@@ -2,7 +2,7 @@ import React from 'react';
 import '../../../styles/TestimonialStyles/index.less';
 
 const Testimonial = props => {
-  const { name, lastInitial, testimonial } = props.testimonial;
+  const { name, lastName, testimonial } = props.testimonial;
   return (
     <div className="testimonial-container">
       <p>
@@ -10,7 +10,7 @@ const Testimonial = props => {
       </p>
       <h3>
         -{name}
-        {lastInitial}.
+        {lastName[0]}.
       </h3>
     </div>
   );
