@@ -20,8 +20,11 @@ const Post = props => {
 
   return (
     <div className="instagram-post-container">
-      <FontAwesomeIcon icon={media_type === 'VIDEO' ? faVideo : faCamera} />
-      <a href={post_url} target="_blank" rel="noopener">
+      <FontAwesomeIcon
+        icon={media_type === 'VIDEO' ? faVideo : faCamera}
+        className="post-icon"
+      />
+      <a href={post_url} target="_blank" rel="noreferrer">
         <img src={getImage()} alt={caption} />
       </a>
     </div>
