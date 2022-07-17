@@ -1,8 +1,15 @@
 import React from 'react';
 import BodySection from '../../common/Sections/BodySection';
 import mainLogo from '../../../img/MescFitLongRed.png';
+import { useNavigate } from 'react-router-dom';
 
 const TopSection = () => {
+  let navigate = useNavigate();
+
+  const handleClick = target => {
+    navigate(target);
+  };
+
   return (
     <div className="image-container top">
       <div className="landing-main">
@@ -20,6 +27,19 @@ const TopSection = () => {
             </div>
           }
         />
+
+        <button
+          className="mobile-only"
+          onClick={() => handleClick('/coaching')}
+        >
+          COACHING
+        </button>
+        <button
+          className="mobile-only"
+          onClick={() => handleClick('/exercise-library')}
+        >
+          EXERCISE LIBRARY
+        </button>
       </div>
     </div>
   );

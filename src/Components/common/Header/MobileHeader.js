@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 
 const MobileHeader = props => {
   return (
-    <header className="mobile-header">
+    <header className="mobile-only">
       <FontAwesomeIcon icon={faBars} className="header-icon" />
       <div className="logo">
         <Link data-testid="header-link" to="/">

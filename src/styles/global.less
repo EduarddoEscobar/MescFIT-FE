@@ -19,3 +19,17 @@
 .center-text {
   text-align: center;
 }
+
+.mobile-only {
+  display: none;
+}
+
+@media (max-width: @s) {
+  .mobile-only {
+    display: flex;
+  }
+
+  .desktop-only {
+    display: none;
+  }
+}
