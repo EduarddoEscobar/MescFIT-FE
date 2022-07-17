@@ -1,0 +1,23 @@
+@import (reference) '../Theme/index.less';
+
+@media (max-width: @s) {
+  header.desktop-header {
+    display: none;
+  }
+  header.mobile-header {
+    padding: 2%;
+    display: flex;
+    justify-content: space-between;
+
+    .logo {
+      width: auto;
+    }
+
+    .header-icon {
+      padding: 0;
+      margin: 0;
+      color: white;
+      font-size: 2rem;
+    }
+  }
+}
