@@ -3,21 +3,6 @@ import BodySection from '../../common/Sections/BodySection';
 import mainLogo from '../../../img/MescFitLongRed.png';
 import { useNavigate } from 'react-router-dom';
 
-const Content = () => {
-  return (
-    <div>
-      <h1>WELCOME TO</h1>
-      <img src={mainLogo} alt={'Workout Inspiration'} />
-      <p>
-        <i>
-          At MescFIT we strive to provide the tools, resources, and guidance to
-          transform your health and fitness
-        </i>
-      </p>
-    </div>
-  );
-};
-
 const TopSection = () => {
   let navigate = useNavigate();
 
@@ -28,11 +13,21 @@ const TopSection = () => {
   return (
     <div className="image-container top">
       <div className="landing-main">
-        <div className="desktop-only">
-          <BodySection left={<Content />} />
-        </div>
-
-        <Content className="mobile-only" />
+        <BodySection
+          left={
+            <div>
+              <h1>WELCOME TO</h1>
+              <img src={mainLogo} alt={'Workout Inspiration'} />
+              <p>
+                <i>
+                  At MescFIT we strive to provide the tools, resources, and
+                  guidance to transform your health and fitness
+                </i>
+              </p>
+            </div>
+          }
+          turnToOne={true}
+        />
 
         <button
           className="mobile-only"
