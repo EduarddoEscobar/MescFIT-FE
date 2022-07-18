@@ -1,5 +1,5 @@
 import React from 'react';
-import TestimonialCarousel from '../Testimonials/TestimonialCarousel';
+import TestimonialCarousel from '../../pages/Testimonials/TestimonialCarousel';
 
 const TestimonialSection = ({ testimonials }) => {
   return (

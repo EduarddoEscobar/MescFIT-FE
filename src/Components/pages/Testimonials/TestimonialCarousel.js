@@ -1,6 +1,5 @@
 import React from 'react';
 import { Carousel } from 'antd';
-import BodySection from '../../common/Sections/BodySection';
 import Testimonial from './Testimonial';
 import styled from 'styled-components';
 
@@ -22,12 +21,16 @@ const TestimonialCarousel = props => {
       className="main-carousel"
     >
       {testimonials.map(([testimonialOne, testimonialTwo], ind) => (
-        <BodySection
-          key={ind}
-          className="carousel-item"
-          left={<Testimonial testimonial={testimonialOne} />}
-          right={<Testimonial testimonial={testimonialTwo} />}
-        />
+        <div key={ind}>
+          <div className="carousel-item">
+            <div className="half center-text">
+              <Testimonial testimonial={testimonialOne} />
+            </div>
+            <div className="half center-text">
+              <Testimonial testimonial={testimonialTwo} />
+            </div>
+          </div>
+        </div>
       ))}
     </CarouselWrapper>
   );

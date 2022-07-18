@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import '../../../styles/LandingPageStyles/index.less';
 import { testimonials as testData } from '../../../data/Testimonials';
-import AboutSection from './AboutSection';
-import TestimonialSection from './TestimonialSection';
-import TopSection from './TopSection';
-import InstagramSection from './InstagramSection';
+import AboutSection from '../../common/Sections/AboutSection';
+import TestimonialSection from '../../common/Sections/TestimonialSection';
+import TopSection from '../../common/Sections/TopSection';
+import InstagramSection from '../../common/Sections/InstagramSection';
 
 const Home = () => {
   const [testimonials, setTestimonials] = useState([]);
