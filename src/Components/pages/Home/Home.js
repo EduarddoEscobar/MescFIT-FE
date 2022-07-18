@@ -13,13 +13,7 @@ const Home = () => {
     document.title = 'MescFIT';
 
     // For testing testimonials display
-    let formattedData = testData.reduce((acc, cur, ind, arr) => {
-      if (ind % 2 === 0) {
-        acc.push(arr.slice(ind, ind + 2));
-      }
-      return acc;
-    }, []);
-    setTestimonials(formattedData);
+    setTestimonials(testData);
   }, []);
 
   return (
