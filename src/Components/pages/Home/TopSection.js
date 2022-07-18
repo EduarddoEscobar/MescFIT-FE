@@ -15,7 +15,7 @@ const TopSection = () => {
       <div className="landing-main">
         <BodySection
           left={
-            <div>
+            <div className="half center-text">
               <h1>WELCOME TO</h1>
               <img src={mainLogo} alt={'Workout Inspiration'} />
               <p>
@@ -26,7 +26,7 @@ const TopSection = () => {
               </p>
             </div>
           }
-          turnToOne={true}
+          right={<div className="half desktop-only"></div>}
         />
 
         <button
