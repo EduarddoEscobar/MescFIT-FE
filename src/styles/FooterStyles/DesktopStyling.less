@@ -42,49 +42,52 @@ footer {
   }
 
   &.footer-links {
-    display: flex;
-    justify-content: space-around;
-
-    .footer-content {
+    .footer-container {
       display: flex;
-      justify-content: center;
-      flex-direction: column;
-      flex-wrap: wrap;
-      width: 20%;
+      justify-content: space-around;
 
-      a,
-      p {
-        font-family: 'Anton', sans-serif;
-        font-size: 1.2rem;
-        color: #696969;
-      }
-
-      &.main-links {
-        justify-content: space-evenly;
-
-        a {
-          height: 33%;
-          font-weight: 200;
-        }
-      }
-
-      &.social-links {
+      .footer-content {
         display: flex;
-        flex-direction: row;
         justify-content: center;
-        align-items: center;
-
-        a {
-          color: white;
-          margin: 0 5%;
-          font-size: 3.5rem;
-        }
-      }
-
-      &.copyright {
-        h2 {
+        flex-direction: column;
+        flex-wrap: wrap;
+        width: 20%;
+        a,
+        p {
           font-family: 'Anton', sans-serif;
-          color: white;
+          font-size: 1.2rem;
+          color: #696969;
+        }
+
+        &.main-links {
+          justify-content: space-evenly;
+
+          a {
+            height: 33%;
+            font-weight: 200;
+          }
+        }
+
+        &.social-links {
+          .icons {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+          }
+
+          a {
+            color: white;
+            margin: 0 5%;
+            font-size: 3.5rem;
+          }
+        }
+
+        &.copyright {
+          h2 {
+            font-family: 'Anton', sans-serif;
+            color: white;
+          }
         }
       }
     }
