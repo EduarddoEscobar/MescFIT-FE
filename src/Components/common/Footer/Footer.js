@@ -14,7 +14,6 @@ const Footer = props => {
       {/*Top Half of Footer*/}
       <div className="footer-div footer-links">
         <div className="social-links footer-content">
-          {/*TODO: Switch these out for FontAwesome icons*/}
           <IconLink
             href="https://www.instagram.com/escobarmarkk/"
             icon={faInstagram}
@@ -36,10 +35,11 @@ const Footer = props => {
           <Link to="/exercise-library">Exercise Library</Link>
           <Link to="/faq">Pricing / FAQs</Link>
         </div>
-        <div className="footer-content center-text">
+        <div className="footer-content center-text footer-contact">
           <a href="mailto:escobarmark@gmail.com" className="underline italics">
             Email Me
           </a>
+          <p className="mobile-only"> - </p>
           <Link to="">Business & Coaching Inquiries</Link>
         </div>
         <div className="footer-content center-text copyright">
@@ -48,7 +48,7 @@ const Footer = props => {
       </div>
 
       {/*Lower Half of Footer*/}
-      <div className="footer-div footer-disclaimer">
+      <div className="footer-div footer-disclaimer desktop-only">
         <div className="side-content">
           <h2>Disclaimer: </h2>
         </div>
