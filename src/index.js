@@ -9,6 +9,7 @@ import rootReducer from './redux/reducers';
 import { Layout } from 'antd';
 import Header from './Components/common/Header/Header';
 import Footer from './Components/common/Footer/Footer';
+import MobileHeader from './Components/common/Header/MobileHeader';
 
 const root = createRoot(document.getElementById('root'));
 const store = configureStore({ reducer: rootReducer });
@@ -24,6 +25,7 @@ root.render(
         }}
       >
         <Header />
+        <MobileHeader />
         <App />
         <Footer />
       </Layout>

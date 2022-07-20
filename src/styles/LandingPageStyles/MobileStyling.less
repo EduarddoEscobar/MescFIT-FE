@@ -1,0 +1,105 @@
+@import (reference) '../Theme/index.less';
+
+@media (max-width: @s) {
+  .landing-main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 70vh;
+    h1 {
+      font-size: 3rem;
+    }
+
+    .half {
+      width: 100%;
+    }
+
+    img {
+      width: 100vw;
+    }
+    p {
+      font-size: 1.25rem;
+      padding: 0 8%;
+      margin-top: 4%;
+      margin-bottom: 8%;
+    }
+
+    button {
+      background-color: #c00000;
+      border: 0;
+      width: auto;
+      display: flex;
+      justify-content: center;
+      margin-top: 2%;
+      margin-bottom: 5%;
+      font-size: 2.5rem;
+      font-weight: 700;
+      padding: 2%;
+    }
+  }
+
+  .landing-about.info-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .owner-picture {
+      order: 1;
+      border: 1px solid indigo;
+      width: 60%;
+      height: 25%;
+
+      img {
+        height: auto;
+        width: 100%;
+      }
+    }
+
+    .about-text {
+      order: 2;
+      width: 100%;
+      padding: 3% 0;
+
+      h2 {
+        font-size: 3rem;
+      }
+
+      p {
+        width: 100%;
+        padding: 0 2%;
+      }
+    }
+  }
+
+  .landing-testimonials {
+    h2 {
+      margin: 6%;
+      font-size: 2.5rem;
+    }
+
+    .carousel-div {
+      &.mobile-only {
+        display: block;
+      }
+
+      .testimonial-container {
+        padding: 0 6%;
+
+        p {
+          font-weight: bold;
+          font-size: 1rem;
+          color: white;
+        }
+
+        h3 {
+          font-size: 3rem;
+          font-family: @cursive_font;
+          color: white;
+        }
+      }
+    }
+  }
+}

@@ -19,3 +19,26 @@
 .center-text {
   text-align: center;
 }
+
+.mobile-only,
+.hide {
+  display: none;
+}
+
+.full {
+  width: 100%;
+}
+
+.half {
+  width: 50%;
+}
+
+@media (max-width: @s) {
+  .mobile-only {
+    display: flex;
+  }
+
+  .desktop-only {
+    display: none;
+  }
+}

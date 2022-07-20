@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import '../../../styles/LandingPageStyles/index.less';
 import { testimonials as testData } from '../../../data/Testimonials';
-import AboutSection from './AboutSection';
-import TestimonialSection from './TestimonialSection';
-import TopSection from './TopSection';
-import InstagramSection from './InstagramSection';
+import AboutSection from '../../common/Sections/AboutSection';
+import TestimonialSection from '../../common/Sections/TestimonialSection';
+import TopSection from '../../common/Sections/TopSection';
+import InstagramSection from '../../common/Sections/InstagramSection';
 
 const Home = () => {
   const [testimonials, setTestimonials] = useState([]);
@@ -13,13 +13,7 @@ const Home = () => {
     document.title = 'MescFIT';
 
     // For testing testimonials display
-    let formattedData = testData.reduce((acc, cur, ind, arr) => {
-      if (ind % 2 === 0) {
-        acc.push(arr.slice(ind, ind + 2));
-      }
-      return acc;
-    }, []);
-    setTestimonials(formattedData);
+    setTestimonials(testData);
   }, []);
 
   return (

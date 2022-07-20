@@ -6,7 +6,7 @@ import { faInstagram } from '@fortawesome/free-brands-svg-icons';
 
 const Header = props => {
   return (
-    <header>
+    <header className="desktop-only">
       <div className="logo">
         <Link data-testid="header-link" to="/">
           MescFIT
