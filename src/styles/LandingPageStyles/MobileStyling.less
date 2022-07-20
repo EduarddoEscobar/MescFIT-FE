@@ -40,6 +40,40 @@
     }
   }
 
+  .landing-about.info-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .owner-picture {
+      order: 1;
+      border: 1px solid indigo;
+      width: 60%;
+      height: 25%;
+
+      img {
+        height: auto;
+        width: 100%;
+      }
+    }
+
+    .about-text {
+      order: 2;
+      width: 100%;
+      padding: 3% 0;
+
+      h2 {
+        font-size: 3rem;
+      }
+
+      p {
+        width: 100%;
+        padding: 0 2%;
+      }
+    }
+  }
+
   .landing-testimonials {
     h2 {
       margin: 6%;

@@ -13,7 +13,7 @@ const AboutSection = () => {
           </i>
         </p>
       </div>
-      <div className="half center-text">
+      <div className="half center-text owner-picture">
         <img src={image} alt="MescFIT owner" />
       </div>
     </div>
