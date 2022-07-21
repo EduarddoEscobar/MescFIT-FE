@@ -1,8 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import '../../../styles/HeaderStyles/index.less';
 import IconLink from '../IconLink';
 import { faInstagram } from '@fortawesome/free-brands-svg-icons';
+import ExtendableLink from './ExtendableLink';
 
 const Header = props => {
   return (
@@ -13,21 +13,48 @@ const Header = props => {
         </Link>
       </div>
       <nav>
-        <Link data-testid="header-link" to="/about">
-          About Me
-        </Link>
-        <Link data-testid="header-link" to="/coaching">
-          Coaching
-        </Link>
-        <Link data-testid="header-link" to="/testimonials">
-          Testimonials
-        </Link>
-        <Link data-testid="header-link" to="/exercise-library">
-          Exercise Library
-        </Link>
-        <Link data-testid="header-link" to="/faq">
-          Pricing / FAQ
-        </Link>
+        <div className="nav-link">
+          <Link data-testid="header-link" to="/about">
+            About Me
+          </Link>
+        </div>
+        <div className="nav-link">
+          <ExtendableLink
+            data-testid="header-link"
+            to="/coaching"
+            links={[
+              {
+                to: '/coaching',
+                title: '1:1 Coaching',
+              },
+              {
+                to: '/faq',
+                title: 'Pricing/FAQs',
+              },
+            ]}
+          >
+            Coaching
+          </ExtendableLink>
+        </div>
+        <div className="nav-link">
+          <ExtendableLink
+            data-testid="header-link"
+            to="/testimonials"
+            links={[
+              {
+                to: '/testimonial-form',
+                title: 'Submit a Testimonial',
+              },
+            ]}
+          >
+            Testimonials
+          </ExtendableLink>
+        </div>
+        <div className="nav-link">
+          <Link data-testid="header-link" to="/exercise-library">
+            Exercise Library
+          </Link>
+        </div>
       </nav>
       <div className="nav-contact">
         <IconLink
