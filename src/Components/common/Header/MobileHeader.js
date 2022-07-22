@@ -6,15 +6,15 @@ import HamburgerMenu from './HamburgerMenu';
 
 const MobileHeader = props => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [focus, setFocus] = useState('');
 
   const handleClick = () => {
-    console.log(!menuOpen);
     setMenuOpen(!menuOpen);
   };
 
   return (
     <header className="mobile-only">
-      {menuOpen && <HamburgerMenu />}
+      {menuOpen && <HamburgerMenu focus={focus} setFocus={setFocus} />}
       <div className="header-container">
         {!menuOpen && (
           <FontAwesomeIcon
@@ -31,7 +31,7 @@ const MobileHeader = props => {
           />
         )}
         <div className="logo">
-          <Link data-testid="header-link" to="/">
+          <Link data-testid="header-link" to="/" onClick={() => setFocus('')}>
             MescFIT
           </Link>
         </div>

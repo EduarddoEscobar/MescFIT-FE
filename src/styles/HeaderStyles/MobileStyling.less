@@ -1,5 +1,7 @@
 @import (reference) '../Theme/index.less';
 
+@font-size: 1.25rem;
+
 @media (max-width: @s) {
   header {
     padding: 0;
@@ -27,6 +29,47 @@
     width: 100vw;
     max-height: 100vh;
     position: absolute;
-    border: 1px solid red;
+    background-color: #474843;
+    font-size: @font-size;
+    padding: 2%;
+    .nav-link {
+      .header-link {
+        padding: 1% 0;
+        font-family: @text_font;
+      }
+
+      .extendable-link {
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+
+        .main-link {
+          width: 100%;
+          &.hovered {
+            background-color: #656565;
+          }
+          p {
+            padding-left: 2%;
+            font-size: @font-size;
+            color: white;
+          }
+        }
+
+        .extended-links {
+          position: relative;
+          justify-content: flex-start;
+          background-color: #474843;
+          text-align: left;
+          .extended-link {
+            padding: 1% 5%;
+            a {
+              font-family: @text_font;
+            }
+          }
+
+          transition: max-height 400ms ease-in-out;
+        }
+      }
+    }
   }
 }

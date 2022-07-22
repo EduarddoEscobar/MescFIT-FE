@@ -24,13 +24,14 @@ const HeaderLink = ({ to, focus, setFocus, children, links, extendable }) => {
           to={to}
           onClick={() => handleClick(to)}
           style={
-            focus === to
+            focus.includes(to)
               ? {
                   color: '#40a9ff',
                 }
               : {}
           }
           data-testid="header-link"
+          className="header-link"
         >
           {children}
         </Link>

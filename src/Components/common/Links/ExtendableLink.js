@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 
 const ExtendableLink = ({ to, links, children, focus, handleClick }) => {
   const [hover, setHover] = useState(false);
+  const [selected, setSelected] = useState(false);
 
   return (
     <div
@@ -12,7 +13,7 @@ const ExtendableLink = ({ to, links, children, focus, handleClick }) => {
         overflow: hover ? 'visible' : 'hidden',
       }}
     >
-      <div className="main-link">
+      <div className={`main-link ${(hover || selected) && 'hovered'}`}>
         <Link
           to={to}
           onMouseOver={() => setHover(true)}
@@ -24,14 +25,21 @@ const ExtendableLink = ({ to, links, children, focus, handleClick }) => {
               : {}
           }
           onClick={() => handleClick(to)}
+          className="header-link"
         >
           {children}
         </Link>
+        <p
+          className="mobile-only hover-button"
+          onClick={() => setSelected(!selected)}
+        >
+          {hover ? '-' : '+'}
+        </p>
       </div>
       <div
         className="extended-links"
         style={{
-          maxHeight: hover ? '50vh' : '0vh',
+          maxHeight: hover || selected ? '50vh' : '0',
         }}
       >
         {links.length > 0 &&
