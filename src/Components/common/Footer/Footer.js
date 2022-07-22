@@ -6,7 +6,7 @@ import {
   faInstagram,
   faYoutube,
 } from '@fortawesome/free-brands-svg-icons';
-import IconLink from '../IconLink';
+import IconLink from '../Links/IconLink';
 
 const Footer = props => {
   return (

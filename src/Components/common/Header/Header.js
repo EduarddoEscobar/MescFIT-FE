@@ -1,60 +1,58 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import IconLink from '../IconLink';
+import IconLink from '../Links/IconLink';
 import { faInstagram } from '@fortawesome/free-brands-svg-icons';
-import ExtendableLink from './ExtendableLink';
+import HeaderLink from '../Links/HeaderLink';
 
 const Header = props => {
+  const [focus, setFocus] = useState('');
+
   return (
     <header className="desktop-only">
       <div className="logo">
-        <Link data-testid="header-link" to="/">
+        <Link data-testid="header-link" to="/" onClick={() => setFocus('/')}>
           MescFIT
         </Link>
       </div>
       <nav>
-        <div className="nav-link">
-          <Link data-testid="header-link" to="/about">
-            About Me
-          </Link>
-        </div>
-        <div className="nav-link">
-          <ExtendableLink
-            data-testid="header-link"
-            to="/coaching"
-            links={[
-              {
-                to: '/coaching',
-                title: '1:1 Coaching',
-              },
-              {
-                to: '/faq',
-                title: 'Pricing/FAQs',
-              },
-            ]}
-          >
-            Coaching
-          </ExtendableLink>
-        </div>
-        <div className="nav-link">
-          <ExtendableLink
-            data-testid="header-link"
-            to="/testimonials"
-            links={[
-              {
-                to: '/testimonial-form',
-                title: 'Submit a Testimonial',
-              },
-            ]}
-          >
-            Testimonials
-          </ExtendableLink>
-        </div>
-        <div className="nav-link">
-          <Link data-testid="header-link" to="/exercise-library">
-            Exercise Library
-          </Link>
-        </div>
+        <HeaderLink focus={focus} setFocus={setFocus} to="/about">
+          About Me
+        </HeaderLink>
+        <HeaderLink
+          focus={focus}
+          setFocus={setFocus}
+          to="/coaching"
+          extendable={true}
+          links={[
+            {
+              to: '/coaching',
+              title: '1:1 Coaching',
+            },
+            {
+              to: '/faq',
+              title: 'Pricing/FAQs',
+            },
+          ]}
+        >
+          Coaching
+        </HeaderLink>
+        <HeaderLink
+          focus={focus}
+          extendable={true}
+          to="/testimonials"
+          setFocus={setFocus}
+          links={[
+            {
+              to: '/testimonial-form',
+              title: 'Submit a Testimonial',
+            },
+          ]}
+        >
+          Testimonials
+        </HeaderLink>
+        <HeaderLink focus={focus} setFocus={setFocus} to="/exercise-library">
+          Exercise Library
+        </HeaderLink>
       </nav>
       <div className="nav-contact">
         <IconLink
