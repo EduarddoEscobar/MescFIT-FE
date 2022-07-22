@@ -17,7 +17,7 @@ const ExtendableLink = ({ to, links, children, focus, handleClick }) => {
           to={to}
           onMouseOver={() => setHover(true)}
           style={
-            focus === to
+            focus.includes(to)
               ? {
                   color: '#40a9ff',
                 }
@@ -40,7 +40,7 @@ const ExtendableLink = ({ to, links, children, focus, handleClick }) => {
               <Link
                 to={link.to}
                 style={
-                  focus === link.to
+                  focus.includes(link.to)
                     ? {
                         color: '#40a9ff',
                       }

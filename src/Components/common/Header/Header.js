@@ -25,11 +25,11 @@ const Header = props => {
           extendable={true}
           links={[
             {
-              to: '/coaching',
+              to: '/coaching/#coaching',
               title: '1:1 Coaching',
             },
             {
-              to: '/faq',
+              to: '/coaching/#faq',
               title: 'Pricing/FAQs',
             },
           ]}
@@ -43,7 +43,7 @@ const Header = props => {
           setFocus={setFocus}
           links={[
             {
-              to: '/testimonial-form',
+              to: '/testimonials/submit',
               title: 'Submit a Testimonial',
             },
           ]}

@@ -37,7 +37,7 @@ const Footer = props => {
             <Link to="/coaching">Coaching</Link>
             <Link to="/testimonials">Testimonials</Link>
             <Link to="/exercise-library">Exercise Library</Link>
-            <Link to="/faq">Pricing / FAQs</Link>
+            <Link to="/coaching">Pricing / FAQs</Link>
           </div>
           <div className="footer-content center-text footer-contact">
             <a
