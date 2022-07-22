@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import FaqItem from './FaqItem';
+import FaqItem from '../../pages/FAQ/FaqItem';
 
 import data from '../../../data/FAQ';
 

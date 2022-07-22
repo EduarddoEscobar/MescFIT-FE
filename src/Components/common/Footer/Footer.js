@@ -6,7 +6,7 @@ import {
   faInstagram,
   faYoutube,
 } from '@fortawesome/free-brands-svg-icons';
-import IconLink from '../IconLink';
+import IconLink from '../Links/IconLink';
 
 const Footer = props => {
   return (
@@ -37,7 +37,7 @@ const Footer = props => {
             <Link to="/coaching">Coaching</Link>
             <Link to="/testimonials">Testimonials</Link>
             <Link to="/exercise-library">Exercise Library</Link>
-            <Link to="/faq">Pricing / FAQs</Link>
+            <Link to="/coaching">Pricing / FAQs</Link>
           </div>
           <div className="footer-content center-text footer-contact">
             <a
