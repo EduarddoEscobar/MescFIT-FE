@@ -1,6 +1,6 @@
 @import (reference) '../Theme/index.less';
 
-@font-size: 1.25rem;
+@font-size: 1.75rem;
 
 @media (max-width: @s) {
   header {
@@ -27,15 +27,21 @@
     top: 100%;
     z-index: 31;
     width: 100vw;
-    max-height: 100vh;
+    max-height: 0;
     position: absolute;
     background-color: #474843;
     font-size: @font-size;
     padding: 2%;
+    transition: max-height 400ms ease-in-out;
     .nav-link {
       .header-link {
-        padding: 1% 0;
+        padding: 2% 0;
         font-family: @text_font;
+        &.single-link {
+          a {
+            font-family: @text_font;
+          }
+        }
       }
 
       .extendable-link {
@@ -48,6 +54,7 @@
           &.hovered {
             background-color: #656565;
           }
+
           p {
             padding-left: 2%;
             font-size: @font-size;

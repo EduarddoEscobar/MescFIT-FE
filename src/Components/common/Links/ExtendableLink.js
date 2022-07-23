@@ -13,7 +13,7 @@ const ExtendableLink = ({ to, links, children, focus, handleClick }) => {
         overflow: hover ? 'visible' : 'hidden',
       }}
     >
-      <div className={`main-link ${(hover || selected) && 'hovered'}`}>
+      <div className={`main-link ${selected && 'hovered'}`}>
         <Link
           to={to}
           onMouseOver={() => setHover(true)}
@@ -33,7 +33,7 @@ const ExtendableLink = ({ to, links, children, focus, handleClick }) => {
           className="mobile-only hover-button"
           onClick={() => setSelected(!selected)}
         >
-          {hover ? '-' : '+'}
+          {selected ? '-' : '+'}
         </p>
       </div>
       <div

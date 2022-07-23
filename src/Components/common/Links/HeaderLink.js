@@ -20,21 +20,22 @@ const HeaderLink = ({ to, focus, setFocus, children, links, extendable }) => {
           {children}
         </ExtendableLink>
       ) : (
-        <Link
-          to={to}
-          onClick={() => handleClick(to)}
-          style={
-            focus.includes(to)
-              ? {
-                  color: '#40a9ff',
-                }
-              : {}
-          }
-          data-testid="header-link"
-          className="header-link"
-        >
-          {children}
-        </Link>
+        <div className="single-link header-link">
+          <Link
+            to={to}
+            onClick={() => handleClick(to)}
+            style={
+              focus.includes(to)
+                ? {
+                    color: '#40a9ff',
+                  }
+                : {}
+            }
+            data-testid="header-link"
+          >
+            {children}
+          </Link>
+        </div>
       )}
     </div>
   );

@@ -1,9 +1,14 @@
 import React from 'react';
 import HeaderLink from '../Links/HeaderLink';
 
-const HamburgerMenu = ({ focus, setFocus }) => {
+const HamburgerMenu = ({ focus, setFocus, menuOpen }) => {
   return (
-    <div className="hamburger-menu">
+    <div
+      className="hamburger-menu"
+      style={{
+        maxHeight: menuOpen ? '100vh' : '0',
+      }}
+    >
       <HeaderLink to="/about" focus={focus} setFocus={setFocus}>
         About Me
       </HeaderLink>

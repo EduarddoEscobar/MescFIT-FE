@@ -13,7 +13,8 @@ const Faq = () => {
 
   return (
     <div className="faq-container">
-      <h1>Frequently Asked Questions</h1>
+      <h1 className="desktop-only d">Frequently Asked Questions</h1>
+      <h1 className="mobile-only m">FAQ</h1>
       {faqs.length > 0 &&
         faqs.map((faq, ind) => <FaqItem faq={faq} key={ind} />)}
     </div>

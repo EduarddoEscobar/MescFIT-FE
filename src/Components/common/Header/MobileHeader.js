@@ -14,7 +14,9 @@ const MobileHeader = props => {
 
   return (
     <header className="mobile-only">
-      {menuOpen && <HamburgerMenu focus={focus} setFocus={setFocus} />}
+      {menuOpen && (
+        <HamburgerMenu focus={focus} setFocus={setFocus} menuOpen={menuOpen} />
+      )}
       <div className="header-container">
         {!menuOpen && (
           <FontAwesomeIcon
