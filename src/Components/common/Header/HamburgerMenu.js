@@ -1,7 +1,7 @@
 import React from 'react';
 import HeaderLink from '../Links/HeaderLink';
 
-const HamburgerMenu = ({ focus, setFocus, menuOpen }) => {
+const HamburgerMenu = ({ focus, setFocus, menuOpen, setMenuOpen }) => {
   return (
     <div
       className="hamburger-menu"
@@ -9,7 +9,12 @@ const HamburgerMenu = ({ focus, setFocus, menuOpen }) => {
         maxHeight: menuOpen ? '100vh' : '0',
       }}
     >
-      <HeaderLink to="/about" focus={focus} setFocus={setFocus}>
+      <HeaderLink
+        to="/about"
+        focus={focus}
+        setFocus={setFocus}
+        setMenuOpen={setMenuOpen}
+      >
         About Me
       </HeaderLink>
       <HeaderLink
@@ -27,6 +32,7 @@ const HamburgerMenu = ({ focus, setFocus, menuOpen }) => {
           },
         ]}
         extendable={true}
+        setMenuOpen={setMenuOpen}
       >
         Coaching
       </HeaderLink>
@@ -40,11 +46,17 @@ const HamburgerMenu = ({ focus, setFocus, menuOpen }) => {
             title: 'Submit a Testimonial',
           },
         ]}
+        setMenuOpen={setMenuOpen}
         extendable={true}
       >
         Testimonials
       </HeaderLink>
-      <HeaderLink to="/exercise-library" focus={focus} setFocus={setFocus}>
+      <HeaderLink
+        to="/exercise-library"
+        focus={focus}
+        setFocus={setFocus}
+        setMenuOpen={setMenuOpen}
+      >
         Exercise Library
       </HeaderLink>
     </div>

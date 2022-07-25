@@ -5,10 +5,10 @@ const data = [
     question: 'What is included?',
     answer: [
       'With every coaching plan you get:',
-      '- 100% Customized Workout Plan For Your Goals Needs and Interests',
-      '- 24/7 Support From Me',
-      '- Video Demonstrations For Every Exercise',
-      '- Optional Nutrition Advice Free of Charge',
+      '- 100% Customized workout plan for your goals, needs, and interests',
+      '- 24/7 Support from me',
+      '- Video demonstrations for every exercise',
+      '- Optional nutrition advice free of charge',
     ],
   },
   {

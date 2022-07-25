@@ -2,9 +2,18 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import ExtendableLink from './ExtendableLink';
 
-const HeaderLink = ({ to, focus, setFocus, children, links, extendable }) => {
+const HeaderLink = ({
+  to,
+  focus,
+  setFocus,
+  children,
+  links,
+  extendable,
+  setMenuOpen,
+}) => {
   const handleClick = newFocus => {
     setFocus(newFocus);
+    setMenuOpen(false);
   };
 
   return (
